@@ -2,6 +2,8 @@
 
 import tcp
 
+
 def main():
-    print(tcp.tcp_connect_port("127.0.0.1", 80))
+    for res in tcp.tcp_connect_scan("access-hat.ch", [443, 444, 666]):
+        print(res)
     return 0
